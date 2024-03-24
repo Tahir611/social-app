@@ -42,7 +42,7 @@ const AuthController = {
         return res.json({ message: "This Email Already Exist" });
       }
       const user = await UserModel.create({ name, email, password: hpassword });
-      res.json({ message: "User Created", user });
+      res.json({ message: "User Created Successfully", user });
     } catch (error) {
       return res.status(500).json({ message: "Server Error", error: error });
     }
